@@ -1,0 +1,52 @@
+//
+//  boasvindas.swift
+//  myProject
+//
+//  Created by Davi Capistrano on 10/03/22.
+//
+
+import Foundation
+
+
+func getDouble(_ msg: String) -> Double {
+    
+    print(msg)
+    let input: String? = readLine()
+    
+    guard let possibleNumber = input else{
+        return 0
+    }
+    
+    guard let number = Double(possibleNumber) else{
+        return 0
+    }
+    
+    return number
+}
+
+func getString(_ msg: String) -> String {
+    
+    print(msg)
+    let input: String? = readLine()
+    
+    guard let string = input else{
+        return ""
+    }
+    
+    return string
+}
+func getInt(_ msg: String) -> Int {
+    
+    print(msg)
+    let input: String? = readLine()
+    
+    guard let possibleNumber = input else{
+        return 0
+    }
+    
+    guard let number = Int (possibleNumber) else{
+        return 0
+    }
+    
+    return number
+}
