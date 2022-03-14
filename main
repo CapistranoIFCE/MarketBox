@@ -14,32 +14,47 @@ var produtos: [(String, Double)] = [("Arroz", 12.5), ("Macarrão", 2.0), ("Feij�
 var listaSecundaria: [[(String, Double)]] = []
 
     print("Olá! Vamos as compras? \nSegue a Lista:\n")
+
         for produto in produtos {
             print("\(produto.0): \(produto.1)")
 }
-    print("\nPrimeiramente, me tire uma dúvida")
+    print("\nPrimeiramente, me tire uma dúvida\nDEPOIS DE VISUALIZAR ESSA LISTA, VOCE DESEJA ::\n\n - PROSSEGUIR \n - ADICIONAR UM ITEM \n - REMOVER UM ITEM\n")
 
-// Opcao de adicionar ou remover item da lista principal
+
+//produtos.append(0)
+//let adicionarItemLista = getInt
+
+//        for i in adicionarItemLista{
+//            let thisItem = getString
+//            let price = getDouble
+//            produtos.append([])
+//            produtos[i-1].append((thisItem, price))
+//}
+
+//produtos.remove(at: 0)
+//let removerItemLista = getInt
+
+
+
+//********************************************************************
+//    PROSSEGUIR , ADICIONAR OU REMOVER ITEM DA LISTA PRINCIPAL
+//********************************************************************
 
     dinheiroNaCarteira = getDouble("Qual valor que temos para as compras?")
 
-// subtrair o valor lista princpal - o valor de compra
+//********************************************************************
+// SUBTRAIR O VALOR DA LISTA PRINCIPAL - VALOR DE ENTRADA DAS COMPRAS
+// ADICIONAR ITEM POR RELEVANCIA (*) (**) (***)
+//********************************************************************
 
     let pessoas = getInt("Gostaria de saber quantas pessoas (na familia) vão participar das nossas comprinhas?")
-
-
-/*
-//ler quantidade de itens por pessoa
-//adicionar laço de produto/valor para cada pessoa
-//criar lista para cada objeto (pessoa)
- */
 
    
 for i in 1...pessoas {
     print("\(i)º Pessoa do grupo")
     var otherItem = true
     while otherItem {
-        let item = getString("Deseja adicionar um item? ")
+        let item = getString(" em? ")
         if item == "sim" {
             let thisItem = getString("Qual o nome deste item?")
             let price = getDouble("Qual o valor deste item: \(thisItem)?")
@@ -51,19 +66,10 @@ for i in 1...pessoas {
         }
         
     }
-    
-    print(listaSecundaria)
 }
 
-/*
-
-//Subtrair o valor total/lista principal e vai adicionar os itens secundarios em ordem
-//Função de Mesclar itens secundários
- 
- */
-
-
-//print(produtos)
-
-
-
+//***********************************************************************************
+// OBTER O VALOR (SUBTRAIDO) E RESGATAR DO ARRAY SECUNDARIO UMA SEG.LISTA DE COMPRAS
+// ...DE FORMA ORDENADA POR PESSOA/RELEVANCIA.
+// FAZER A SOMA DE FORMA ORDENADA POR NIVEL DE RELEVANCIA E FAZER UM PACK
+//**********************************************************************************
