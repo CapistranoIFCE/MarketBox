@@ -9,7 +9,7 @@ import Foundation
 
 var dinheiroNaCarteira : Double = 0
 
-var produtos: [(String, Double)] = [("Arroz", 12.5), ("Macarrão", 2.0), ("Feijão", 12.5), ("Leite", 12.5), ("Pão", 12.5), ("Açúcar", 12.5), ("Sal", 12.5), ("Sabão em Pó", 12.5), ("Sabonete", 12.5), ("Papel Higienico", 12.5)]
+var produtos: [(String, Double)] = [("Arroz", 12.5), ("Macarrão", 2.0), ("Feijão", 12.5), ("Leite", 12.5), ("Pão", 12.5), ("Açúcar", 12.5), ("Sal", 12.5), ("Sabão em Pó", 12.5), ("Sabonete", 12.5)]
 
 var listaSecundaria: [[(String, Double)]] = []
 
@@ -18,27 +18,37 @@ var listaSecundaria: [[(String, Double)]] = []
         for produto in produtos {
             print("\(produto.0): \(produto.1)")
 }
-    print("\nPrimeiramente, me tire uma dúvida\nDEPOIS DE VISUALIZAR ESSA LISTA, VOCE DESEJA ::\n\n - PROSSEGUIR \n - ADICIONAR UM ITEM \n - REMOVER UM ITEM\n")
+    print("\nPrimeiramente, me tire uma dúvida\nDEPOIS DE VISUALIZAR ESSA LISTA, VOCE DESEJA ::\n\n 1 - ADICIONAR \n 2 - REMOVER \n 3 - PROSSEGUIR\n")
 
 
-//produtos.append(0)
-//let adicionarItemLista = getInt
-
-//        for i in adicionarItemLista{
-//            let thisItem = getString
-//            let price = getDouble
-//            produtos.append([])
-//            produtos[i-1].append((thisItem, price))
-//}
-
-//produtos.remove(at: 0)
-//let removerItemLista = getInt
-
-
-
-//********************************************************************
-//    PROSSEGUIR , ADICIONAR OU REMOVER ITEM DA LISTA PRINCIPAL
-//********************************************************************
+    let menuOpcoes = getInt("Entre com um valor")
+    switch menuOpcoes {
+    case 1:
+        let num = getInt("Quer adicionar quantos itens?")
+        for _ in 0..<num{
+            
+            let thisItem = getString("Nome do Alimento")
+            let price = getDouble("Valor")
+            produtos.append((thisItem, price))
+            
+        }
+        print(produtos)
+    case 2:
+    print("Quer remover quantos itens?")
+        let nomeProduto = getString("Nome do produto")
+        var indexDoProduto: Int?
+        for i in 0..<produtos.count{
+            if produtos[i].0 == nomeProduto {
+                indexDoProduto = i
+            }
+        }
+        if let indexDoProduto = indexDoProduto {
+            produtos.remove(at: indexDoProduto)
+        }
+        print(produtos)
+    default:
+    print(".")
+}
 
     dinheiroNaCarteira = getDouble("Qual valor que temos para as compras?")
 
@@ -54,8 +64,8 @@ for i in 1...pessoas {
     print("\(i)º Pessoa do grupo")
     var otherItem = true
     while otherItem {
-        let item = getString(" em? ")
-        if item == "sim" {
+        let item = getString(" Quer adicionar um item? ").uppercased()
+        if item == "SIM" {
             let thisItem = getString("Qual o nome deste item?")
             let price = getDouble("Qual o valor deste item: \(thisItem)?")
             listaSecundaria.append([])
