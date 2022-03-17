@@ -21,21 +21,21 @@ var listaSecundaria: [[(String, Double)]] = []
     print("\nPrimeiramente, me tire uma dúvida\nDEPOIS DE VISUALIZAR ESSA LISTA, VOCE DESEJA ::\n\n 1 - ADICIONAR \n 2 - REMOVER \n 3 - PROSSEGUIR\n")
 
 
-    let menuOpcoes = getInt("Entre com um valor")
+    let menuOpcoes = getInt("QUAL OPÇÃO DESEJA ESCOLHER:")
     switch menuOpcoes {
     case 1:
-        let num = getInt("Quer adicionar quantos itens?")
+        let num = getInt("Quantos itens deseja adicionar?")
         for _ in 0..<num{
             
-            let thisItem = getString("Nome do Alimento")
-            let price = getDouble("Valor")
+            let thisItem = getString("Digite o nome do ITEM")
+            let price = getDouble("Digite o preço do ITEM")
             produtos.append((thisItem, price))
             
         }
         print(produtos)
     case 2:
-    print("Quer remover quantos itens?")
-        let nomeProduto = getString("Nome do produto")
+    print("Quantos itens deseja remover?")
+        let nomeProduto = getString("Qual nome do produto")
         var indexDoProduto: Int?
         for i in 0..<produtos.count{
             if produtos[i].0 == nomeProduto {
@@ -52,8 +52,16 @@ var listaSecundaria: [[(String, Double)]] = []
 
     dinheiroNaCarteira = getDouble("Qual valor que temos para as compras?")
 
+    var valorTotal = 0.0
+
+        for produto in produtos {
+            valorTotal += produto.1
+        }
+
+    let valorRestante = dinheiroNaCarteira-valorTotal
+    print(valorRestante , " - VALOR DESCONTADO")
+
 //********************************************************************
-// SUBTRAIR O VALOR DA LISTA PRINCIPAL - VALOR DE ENTRADA DAS COMPRAS
 // ADICIONAR ITEM POR RELEVANCIA (*) (**) (***)
 //********************************************************************
 
@@ -64,6 +72,11 @@ for i in 1...pessoas {
     print("\(i)º Pessoa do grupo")
     var otherItem = true
     while otherItem {
+        
+//********************************************************************
+// ENTRAR POR OPCAO (1- SIM) (2- NAO) (DIGITE UM NUMERO CORRETO)
+//********************************************************************
+        
         let item = getString(" Quer adicionar um item? ").uppercased()
         if item == "SIM" {
             let thisItem = getString("Qual o nome deste item?")
