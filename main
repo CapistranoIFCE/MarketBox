@@ -138,12 +138,17 @@ for i in 1...pessoas {
             
     }
     
-//            var valorComprasAdd = 0.0
-//
-//            for produtoSec in listaSecundaria {
-//                valorComprasAdd += produtoSec.1
-//            }
-//            print(valorComprasAdd)
+            var valorComprasSecundarias = 0.0
+
+            for lista in listaSecundaria {
+                var valorComprasLista = 0.0
+                for produto in lista {
+                    valorComprasLista += produto.1
+                }
+                valorComprasSecundarias += valorComprasLista
+            }
+            
+            print(valorComprasSecundarias)
 }
 
 //***********************************************************************************
