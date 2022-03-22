@@ -15,9 +15,17 @@ var listaSecundaria: [[(String, Double)]] = []
 
     print("OLÁ, VAMOS AS COMPRAS? \nSEGUE A LISTA:\n")
 
+print("[---------------------------------------]")
+print("[                 LISTA!                ]")
+print("[---------------------------------------] \n")
+
         for produto in produtos {
             print("\(produto.0): \(produto.1)")
 }
+
+print("\n[-------------------------------------]")
+print("[              VAMOS LÁ!              ]")
+print("[-------------------------------------]")
     print("\nPRIMEIRAMENTE ME TIRA UMA DÚVIDA\nDEPOIS DE VISUALIZAR ESSA LISTA, VOCE DESEJA ::\n\n 1 - ADICIONAR \n 2 - REMOVER \n 3 - PROSSEGUIR\n")
 
 
@@ -51,24 +59,48 @@ var listaSecundaria: [[(String, Double)]] = []
     print(produtos)
             
             default:
-                print(".")
+                print(" ")
             
 }
 
     dinheiroNaCarteira = getDouble("QUAL É O VALOR PARA NOSSAS COMPRAS?")
+
+
+//**************************************************************************
+// SE O VALOR FOR MENOR QUE AS COMPRAS, ELE PEDE PRA DIGITAR UM NOVO VALOR
+//**************************************************************************
 
     var valorTotal = 0.0
 
         for produto in produtos {
             valorTotal += produto.1
         }
+        print(valorTotal)
+    
+        while (dinheiroNaCarteira < valorTotal) {
+            print("\nDINHEIRO INSUFICIENTE\nDIGITE UM VALOR COMPATIVEL: \n")
+            dinheiroNaCarteira = getDouble("DIGITE NOVO VALOR")
+}
+    
     let valorRestante = dinheiroNaCarteira-valorTotal
 
-    print(valorRestante , " - VALOR DESCONTADO")
+    print("R$ ", valorRestante , " VALOR RESTANTE PARA COMPRAS ADICIONAIS\n")
 
 //********************************************************************
 // ADICIONAR ITEM POR RELEVANCIA (*) (**) (***)
+// While para caso o valor seja compativel com a entrada. Ja imprime lista
 //********************************************************************
+
+        if dinheiroNaCarteira == valorTotal{
+            print("\n[-------------------------------------]")
+            print("[         SUA LISTA FINAL É!          ]")
+            print("[-------------------------------------]\n")
+        for produto in produtos {
+                print("\(produto.0): \(produto.1)")
+        }
+        pause()
+        print("\n")
+    }
 
     let pessoas = getInt("QUANTAS PESSOA VÃO ADICIONAR ITENS?")
 
@@ -77,11 +109,6 @@ for i in 1...pessoas {
     print("\(i)º Pessoa do grupo")
     var otherItem = true
     while otherItem {
-        
-//********************************************************************
-// ENTRAR POR OPCAO (1- SIM) (2- NAO) (DIGITE UM NUMERO CORRETO)
-//********************************************************************
-        
         
         let menuAdicionar = getInt("Quer adicionar um item? \n1 - SIM\n2 - NÃO")
             switch menuAdicionar {
@@ -94,22 +121,29 @@ for i in 1...pessoas {
             
             
             default:
+                print("\n[-------------------------------------]")
+                print("[         SUA LISTA FINAL É!          ]")
+                print("[-------------------------------------]\n")
+            for produto in produtos {
+                    print("\(produto.0): \(produto.1)")
+        }
+            print("\n")
             otherItem = false
+            
+            
+            print("O TOTAL DAS COMPRAS É DE: [", valorTotal, "]\n")
     
             }
-            
-//        let item = getString(" Quer adicionar um item? ").uppercased()
-//        if item == "SIM" {
-//            let thisItem = getString("Qual o nome deste item?")
-//            let price = getDouble("Qual o valor deste item: \(thisItem)?")
-//            listaSecundaria.append([])
-//            listaSecundaria[i-1].append((thisItem, price))
-//            print("Item adicionado a lista com sucesso!!!")
-//        } else {
-//            otherItem = false
-//        }
         
+            
     }
+    
+//            var valorComprasAdd = 0.0
+//
+//            for produtoSec in listaSecundaria {
+//                valorComprasAdd += produtoSec.1
+//            }
+//            print(valorComprasAdd)
 }
 
 //***********************************************************************************
