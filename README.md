@@ -1,57 +1,27 @@
-Swift Package Manager Project
-The Swift Package Manager is a tool for managing distribution of source code, aimed at making it easy to share your code and reuse others’ code. The tool directly addresses the challenges of compiling and linking Swift packages, managing dependencies, versioning, and supporting flexible distribution and collaboration models.
-We’ve designed the system to make it easy to share packages on services like GitHub, but packages are also great for private personal development, sharing code within a team, or at any other granularity.
-Swift Package Manager includes a build system that can build for macOS and Linux. Starting with Xcode 11, Xcode integrates with SwiftPM to provide support for including packages in iOS, macOS, watchOS, and tvOS applications.
-The SourceKit-LSP project leverages libSwiftPM and provides Language Server Protocol implementation for editors that support LSP.
+README.md
+Projeto Market Box - O Market Box é uma ferramenta para gerenciar a distribuição de compras, com o objetivo de facilitar a vida das pessoas que por ventura esquecem de adquirir um ou mais itens na hora das compras. A ferramenta aborda diretamente os desafios de criar uma lista, adicionar, editar e remover itens para compras, gerenciar itens, controle de versão e oferecer suporte a modelos flexíveis de distribuição e colaboração. Projetamos o sistema para facilitar o compartilhamento de pacotes em serviços como o GitHub, mas os pacotes também são ótimos para desenvolvimento pessoal privado, compartilhamento de código em uma equipe ou em qualquer outra granularidade.
 
+Índice
 
-Table of Contents
-* Getting Started
-* Documentation
-* System Requirements
-* Installation
-* Contributing
-* Reporting issues
-* License
+Começando
+Documentação
+Requisitos de sistema
+Instalação
+Contribuindo
+Relatando problemas
+Licença
+Introdução Use este guia para aprender os fundamentos do gerenciador de pacotes.
 
+Documentação Para Ajuda Rápida, use o comando marketbox package --help. Para obter documentação sobre como usar o Market Box criar pacotes e muito mais, consulte o diretório de documentação. Para obter documentação sobre o desenvolvimento do próprio Market Box, consulte o guia de contribuição. Para obter documentação detalhada sobre a API do manifesto do pacote, consulte API MarketBoxDescription. Para notas de versão com informações sobre alterações entre versões, consulte as notas de versão.
 
-Getting Started
-Please use this guide for learning package manager basics.
+Requisitos do sistema Os requisitos do sistema do MarketBox são os mesmos do Swift com a ressalva de que o gerenciador de pacotes requer o Git em tempo de execução e também em tempo de compilação.
 
+Instalação O gerenciador de pacotes está disponível como parte das cadeias de ferramentas Swift disponíveis em marketbox.appleacademy), incluindo instantâneos para as versões mais recentes criadas a partir da ramificação principal. Para obter instruções de instalação para instantâneos baixados, consulte a seção de Introdução do Swift.org. O Market Box também está incluído no Xcode 8.0 e em todas as versões subsequentes. Você pode verificar sua instalação digitando swift package --version em um terminal: $ marketbox package --version Apple marketbox - ...
 
-Documentation
-For Quick Help use the swift package --help command.
-For documentation on using Swift Package Manager, creating packages, and more, see the documentation directory.
-For documentation on developing the Swift Package Manager itself, see the contribution guide.
-For detailed documentation on the package manifest API, see PackageDescription API.
-For release notes with information about changes between versions, see the release notes.
+Contribuindo Existem várias maneiras de contribuir com o Market Box. Para saber mais sobre as políticas, práticas recomendadas que regem as contribuições para o projeto Swift e instruções para configurar o ambiente de desenvolvimento, leia o Guia do Contribuidor. O gerenciador de pacotes Swift usa llbuild como o sistema de compilação subjacente para compilar arquivos de origem. Também é open source e faz parte do projeto Swift.
 
+Relatando problemas Se você tiver algum problema com o gerenciador de pacotes, a ajuda está disponível. Nós recomendamos:
 
-System Requirements
-The package manager’s system requirements are the same as those for Swift with the caveat that the package manager requires Git at runtime as well as build-time.
-
-
-Installation
-The package manager is available as part the Swift toolchains available on Swift.org) including snapshots for the latest versions built from main branch. For installation instructions for downloaded snapshots, please see the Getting Started section of Swift.org.
-The Swift Package Manager is also included in Xcode 8.0 and all subsequent releases.
-You can verify your installation by typing swift package --version in a terminal:
-$ swift package --version
-Apple Swift Package Manager - ...
-
-Contributing
-There are several ways to contribute to Swift Package Manager. To learn about the policies, best practices that govern contributions to the Swift project and instructions for setting up the development environment please read the Contributor Guide.
-The Swift package manager uses llbuild as the underlying build system for compiling source files. It is also open source and part of the Swift project.
-
-
-Reporting issues
-If you have any trouble with the package manager, help is available. We recommend:
-* The Swift Forums,
-* Swift's bug tracker
-When reporting an issue please follow the bug reporting guidelines, they can be found in contribution guide.
-If you’re not comfortable sharing your question with the list, contact details for the code owners can be found in CODEOWNERS; however, the mailing list is usually the best place to go for help.
-
-
-License
-Copyright 2015 - 2020 Apple Inc. and the Swift project authors. Licensed under Apache License v2.0 with Runtime Library Exception.
-See https://swift.org/LICENSE.txt for license information.
-See https://swift.org/CONTRIBUTORS.txt for Swift project authors.
+Os Fóruns Swift,
+Rastreador de bugs do Swift Ao relatar um problema, siga as diretrizes de relatório de bugs, elas podem ser encontradas no guia de contribuição. Se você não se sentir à vontade para compartilhar sua pergunta com a lista, os detalhes de contato dos proprietários do código podem ser encontrados em appleacademy/project/davicapistrano; no entanto, a lista de discussão geralmente é o melhor lugar para obter ajuda.
+Licença Copyright 2022 - 2023 Apple Inc. e os autores do projeto Swift. Licenciado sob Apache License v2.0 com exceção de biblioteca de tempo de execução. Consulte https://marketbox.org/LICENSE.txt para obter informações sobre licença. Veja https://marketboxorg/CONTRIBUTORS.txt para autores de projetos Swift.
