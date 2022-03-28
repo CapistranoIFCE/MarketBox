@@ -1,4 +1,3 @@
-README.md
 Projeto Market Box - O Market Box é uma ferramenta para gerenciar a distribuição de compras, com o objetivo de facilitar a vida das pessoas que por ventura esquecem de adquirir um ou mais itens na hora das compras. A ferramenta aborda diretamente os desafios de criar uma lista, adicionar, editar e remover itens para compras, gerenciar itens, controle de versão e oferecer suporte a modelos flexíveis de distribuição e colaboração. Projetamos o sistema para facilitar o compartilhamento de pacotes em serviços como o GitHub, mas os pacotes também são ótimos para desenvolvimento pessoal privado, compartilhamento de código em uma equipe ou em qualquer outra granularidade.
 
 Índice
