@@ -1,12 +1,19 @@
 Projeto Market Box – É uma ferramenta para gerenciar a distribuição de compras, com o objetivo de facilitar a vida das pessoas que por ventura esquecem de adquirir um ou mais itens na hora das compras. A ferramenta aborda diretamente os desafios de criar uma lista, adicionar, editar e remover itens para compras, gerenciar itens, controle de versão e oferecer suporte a modelos flexíveis de distribuição e colaboração. 
 
 1- Índice
+
 2- Começando
+
 3- Documentação
+
 4- Requisitos de sistema
+
 5- Instalação
+
 6- Contribuindo
+
 7- Relatando problemas
+
 8- Licença
 
 Introdução Use este guia para aprender os fundamentos do gerenciador de pacotes.
