@@ -24,5 +24,5 @@ Ao relatar um problema, siga as diretrizes de relatório de bugs, elas podem ser
 Licença Copyright 2022 - 2023 Apple Inc. e os autores do projeto Swift. Licenciado sob Apache License v2.0 com exceção de biblioteca de tempo de execução. Consulte https://marketbox.org/LICENSE.txt para obter informações sobre licença. Veja https://marketboxorg/CONTRIBUTORS.txt para autores de projetos Swift.
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/101426741/160743823-0dc18520-011f-4782-9547-22f5cc7d31fe.jpg" width="0px" />
+<img src="https://user-images.githubusercontent.com/101426741/160743823-0dc18520-011f-4782-9547-22f5cc7d31fe.jpg" width="300px" />
 </div>
